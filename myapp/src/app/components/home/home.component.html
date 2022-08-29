@@ -1,0 +1,11 @@
+<div *ngIf="msg=='hobby'">
+    <app-hobby [hobbylist]="hobbies" (deleteH)="deleteH($event)" (favH)="favH($event)"></app-hobby>
+</div>
+<div *ngIf="msg=='addhobby'">
+    <app-addhobby (addhobbyevent)="addhobby($event)"></app-addhobby>
+</div>
+<div *ngIf="msg=='fav'">
+    <app-favourite [hobbylist]="hobbies" (unf)="unfav($event)"></app-favourite>
+</div>
+<input  type="text" [(ngModel)]="no">
+<p>{{no|mypipe}}</p>

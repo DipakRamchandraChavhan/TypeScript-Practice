@@ -1,0 +1,7 @@
+<div>
+<ul class="list-group" *ngFor="let h of hobbylist;let i=index">
+<li class="list-group-item" *ngIf="h.val==1">{{h.name|mypipe}}<button class="btn btn-primary" 
+    (click)="unfav(i)">Unfavourite</button>
+</li>
+</ul>
+</div>
